@@ -1,4 +1,4 @@
-Ionic-Angular-Advice
+Ionic Advice
 ====================
 
 ## How to write an input for login with no spellcheck or autocorrect for Hybrid app
