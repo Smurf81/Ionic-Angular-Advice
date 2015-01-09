@@ -30,4 +30,15 @@ Don't use SVG for Android device with version under 4.4. Use PNG instead.
 
 If you have multiple input with different type ( like email and number ), attention with the scroll feature. If the scroll is at false, sometimes the ios keyboard change for no reason : you click on email input and the email keyboard appears and flip to number keyboard.
 
+## Show image store in your application on IOS
 
+With cordova, use toInternalURL for retrieve the path of your image.
+You will have a cdvfile://localhost/path/image URL.
+But Angular will block this type of URL, you will have to config you app because angular is putting unsafe: prefix before link..
+
+```
+var app = angular.module( 'myApp', [] ).config( ['$compileProvider',function( $compileProvider ){ 
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|blob|cdvfile):|data:image\//);
+}
+]);
+```
