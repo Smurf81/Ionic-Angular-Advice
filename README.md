@@ -36,7 +36,7 @@ With cordova, use toInternalURL for retrieve the path of your image.
 You will have a cdvfile://localhost/path/image URL.
 But Angular will block this type of URL, you will have to config you app because angular is putting unsafe: prefix before link..
 
-```
+```javascript
 var app = angular.module( 'myApp', [] ).config( ['$compileProvider',function( $compileProvider ){ 
   $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|blob|cdvfile):|data:image\//);
 }
