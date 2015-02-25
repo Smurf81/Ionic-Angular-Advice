@@ -26,6 +26,10 @@ Now you could use it for login with email and phone in the same input
 
 Don't use SVG for Android device with version under 4.4. Use PNG instead.
 
+## Don't use SVG Animation on Android 4.1 or lower
+
+Neither for keyframes css animation
+
 ## input & scroll on ios
 
 If you have multiple input with different type ( like email and number ), attention with the scroll feature. If the scroll is at false, sometimes the ios keyboard change for no reason : you click on email input and the email keyboard appears and flip to number keyboard.
